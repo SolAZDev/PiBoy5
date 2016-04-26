@@ -1,0 +1,154 @@
+@import "bootstrap.css";
+@PipText: #17b2ff;
+@PipSel: #17b2ff;
+@dark-gradient: #025A86;
+@light-gradient: #0075b0;
+@BarBG: #0A0;
+@BarFil: #0F0;
+@transparent: rgba(0,0,0,0);
+
+
+body{
+	color: @PipText;
+	background-color: black;
+	font-family:  Helvetica, sans-serif;
+	font-size: 12pt;
+	margin: auto;
+	text-align: center;
+	border-radius:  50px;
+}
+
+
+.TopScreen{
+	background-color: #000;
+	color: @PipText;
+	margin: auto;
+	border-bottom: 1px solid @PipText;
+	text-align: center;
+}
+
+/* INTERFACE */
+.MainScreen{
+	box-sizing: border-box;
+
+}
+.transparent-button{
+	background: none;
+	border: none;
+}
+
+.menu-option{
+    transition: all, 0.2s;
+		background: none;
+		border: none;
+    padding: 1px 45px;
+    margin-top: 1px;
+    &:hover, &.active{
+        cursor: pointer;
+        outl: 2px,solid;
+				outline: 1px solid @PipText;
+        background: fade(@PipText, 20%);
+    }
+		&:focus{
+			outline: 1px solid @PipText;
+
+}
+
+.submenu-option{
+	position: absolute;
+	.menu-option;
+	padding: 0 15px;
+	color: fade(@PipText,60%);
+	&:hover, &.active, &:target{
+		color: @PipText;
+	}
+}
+
+.StatBar{
+	float:bottom;
+	bottom: 0px;
+	border: none;
+	padding: 1px 15px;
+	margin: auto;
+	text-align: left;
+	display: inline-block;
+	outline: 2px solid #111;
+	background: fade(@PipText, 25%);
+}
+
+
+.StatItemButton{
+	border: none;
+	.menu-option;
+	background: fade(@PipText, 55%);
+	color: #111;
+	padding: 2px 20px;
+	&:hover, &.active{
+		outline: 0px;
+		background: fade(@PipText, 80%);
+	}
+	&:focus{
+		outline: 0px;
+	}
+}
+
+.EquipIcon{
+	position: absolute;
+	border: none;
+	width: 96px;
+	height: 96px;
+	padding: 35 0px;
+	text-align: center;
+	display: inline-block;
+	background: fade(@PipText, 25%);
+
+}
+
+.InvetoryItemButton{
+	.StatItemButton;
+	list-style-type: none;
+	top:40px;
+	text-align: left;
+	width: 350px;
+	margin: 5 15px;
+	padding: 10px 10px;
+}
+
+.bar{
+	display: inline-block;
+	position:absolute;
+	padding:1px 1px 0;
+	border: 1px solid @BarBG;
+	background-color: @BarFil;
+	height:8px;
+	width:60px;
+}
+.progress{
+	background: #222;
+	border: 1px solid @BarBG;
+	display: inline-block;
+}
+.progress-bar{
+	background: @BarFil;
+	color: #888;
+	display: inline-block;
+}
+
+.Icon{
+	position: relative;
+	&::before{
+		display: block;
+		position: absolute;
+		background: @PipText;
+		backface-visibility: 0.5;
+
+	}
+}
+
+tr{
+	height:40px;
+}
+
+td{
+	padding: 10 10px;
+}
