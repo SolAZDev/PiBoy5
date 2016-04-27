@@ -4,6 +4,7 @@
 <head>
     <title>Pi-Boy Prototype</title>
     <link rel="stylesheet" href="css/PipStyle.css" type="text/css">
+    <script type="text/javascript" src="js/gmap.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -11,21 +12,23 @@
 </head>
 
 <body>
-    <div id="TopMenu" class="TopScreen" style="float:top;position:relative;">
-        <span id="StatMenu" class="menu-option">STATS</span>
-        <span id="InvMenu" class="menu-option">INV</span>
-        <span id="DataMenu" class="menu-option">DATA</span>
-        <span id="MapMenu" class="menu-option">MAP</span>
-        <span id="RadioMenu" class="menu-option">RADIO</span>
+    <div id="TopMenu" class="TopScreen">
+        <span id="StatMenu" class="menu-option" style=";position:absolute;left:13%;">STATS</span>
+        <span id="InvMenu" class="menu-option"  style="position:absolute;left:30%;">INV</span>
+        <span id="DataMenu" class="menu-option" style="position:absolute;left:47%;">DATA</span>
+        <span id="MapMenu" class="menu-option"  style="position:absolute;right:30%;">MAP</span>
+        <span id="RadioMenu" class="menu-option"style="position:absolute;right:15%;">RADIO</span>
+        <br />
+        <div id="BotomLine" style="border-bottom:.5px solid #17b2ff;"></div>
     </div>
     <div class="MainScreen">
         <!-- SatusScreen -->
         <div id="StatScreen">
             <!--SubMenu-->
-            <div id="StatSub" style="left:15%;">
-                <span id="StatusBtn" class="submenu-option">STATUS</span>
+            <div id="StatSub" style="left:12.5%;">
+                <span id="StatusBtn"  class="submenu-option">STATUS</span>
                 <span id="SpecialBtn" class="submenu-option">SPECIAL</span>
-                <span id="PerksBtn" class="submenu-option">PERKS</span>
+                <span id="PerksBtn"   class="submenu-option">PERKS</span>
             </div>
             <!--Status-->
             <div id="StatusScreen" style="top:25px;width:100%;height:90%">
@@ -185,8 +188,8 @@
             <span id="AbtBtn" class="submenu-option">ABOUT</span>
           </div>
           <br />
-          <div id="CalendarScreen">
-            <iframe src="https://calendar.google.com/calendar/embed?title=Solrac%27s%20Calendar&amp;showTitle=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;height=450&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=lordsolrac2%40gmail.com&amp;color=%2329527A&amp;src=%23contacts%40group.v.calendar.google.com&amp;color=%2329527A&amp;src=en.pr%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FManaus" style="border-width:0" width="800" height="380" frameborder="0" scrolling="no"></iframe>
+          <div id="CalendarScreen" style="top:25px;width:100%,height:90%;">
+            <iframe src="https://calendar.google.com/calendar/embed?title=Solrac%27s%20Calendar&amp;showTitle=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;height=450&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=lordsolrac2%40gmail.com&amp;color=%2329527A&amp;src=%23contacts%40group.v.calendar.google.com&amp;color=%2329527A&amp;src=en.pr%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FManaus" style="border-width:0;left:0px;" class="MapZone" frameborder="0" scrolling="no"></iframe>
           </div>
           <div id="ContactScreen">
             <iframe src="https://contacts.google.com/u/0/preview/all" style="border-width:3" width="800" height="380" frameborder="0" scrolling="no"></iframe>
@@ -204,6 +207,9 @@
           </div>
         </div>
         <div id="MapScreen" style="top:25px;width:100%,height:90%;">
+          <div id="MapArea" class="MapZone">
+
+          </div>
         </div>
         <div id="RadioScreen" style="top:25px;width:100%;height:90%">
 

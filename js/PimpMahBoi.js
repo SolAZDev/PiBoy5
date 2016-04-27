@@ -159,6 +159,11 @@ $(document).ready(function(){
     $("#AboutScreen").show();
   });
 
+  //MAP Section
+  $("#MapMenu").click(function(){
+    StartUp(4);
+  });
+
 });
 
 function ScreenTransition(Page){
@@ -179,6 +184,12 @@ function StartUp(Screen) {
       $("#RadioScreen").hide();
       $("#SpecialScreen").hide();
       $("#PerkScreen").hide();
+
+      $("#StatMenu").addClass("menu-option-selected");
+      $("#InvMenu").removeClass("menu-option-selected");
+      $("#DataMenu").removeClass("menu-option-selected");
+      $("#MapMenu").removeClass("menu-option-selected");
+      $("#RadioMenu").removeClass("menu-option-selected");
       break;
     case 2:
       $("#StatScreen").hide();
@@ -187,6 +198,12 @@ function StartUp(Screen) {
       $("#MapScreen").hide();
       $("#RadioScreen").hide();
       ItemListing(1);
+
+      $("#StatMenu").removeClass("menu-option-selected");
+      $("#InvMenu").addClass("menu-option-selected");
+      $("#DataMenu").removeClass("menu-option-selected");
+      $("#MapMenu").removeClass("menu-option-selected");
+      $("#RadioMenu").removeClass("menu-option-selected");
       break;
     case 3:
       $("#StatScreen").hide();
@@ -197,6 +214,27 @@ function StartUp(Screen) {
       $("#CalendarScreen").show();
       $("#ContactScreen").hide();
       $("#AboutScreen").hide();
+
+      $("#StatMenu").removeClass("menu-option-selected");
+      $("#InvMenu").removeClass("menu-option-selected");
+      $("#DataMenu").addClass("menu-option-selected");
+      $("#MapMenu").removeClass("menu-option-selected");
+      $("#RadioMenu").removeClass("menu-option-selected");
+      break;
+    case 4:
+    $("#StatScreen").hide();
+    $("#InvScreen").hide();
+    $("#DataScreen").hide();
+    $("#MapScreen").show();
+    $("#RadioScreen").hide();
+    getLocation();
+
+    $("#StatMenu").removeClass("menu-option-selected");
+    $("#InvMenu").removeClass("menu-option-selected");
+    $("#DataMenu").removeClass("menu-option-selected");
+    $("#MapMenu").addClass("menu-option-selected");
+    $("#RadioMenu").removeClass("menu-option-selected");
+      break;
   }
   //StartUpEnd
 }
@@ -304,4 +342,48 @@ function BattrryPercent(){
       $("#BatHealth").css('width',batteryL.level*100+"%");
     });
   }
+}
+
+function getLocation(){
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(function(pos){
+      //alert(pos.coords.latitude+":"+pos.coords.longitude);
+      //InitMap(pos);
+      showPosition(pos);
+    });
+  }
+}
+
+function showPosition(position) { //Straight from W3CShcools~
+    lat = position.coords.latitude;
+    lon = position.coords.longitude;
+    latlon = new google.maps.LatLng(lat, lon);
+    mapholder = document.getElementById('MapArea')
+
+    var myOptions = {
+    center:latlon,zoom:16,
+    mapTypeId:google.maps.MapTypeId.ROADMAP,
+    mapTypeControl:false,
+    navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+    }
+
+    var map = new google.maps.Map(document.getElementById("MapArea"), myOptions);
+    var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
 }

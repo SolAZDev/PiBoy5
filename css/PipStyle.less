@@ -15,7 +15,6 @@ body{
 	font-size: 12pt;
 	margin: auto;
 	text-align: center;
-	border-radius:  50px;
 }
 
 
@@ -40,9 +39,9 @@ body{
 .menu-option{
     transition: all, 0.2s;
 		background: none;
+		padding: 0 15px;
 		border: none;
-    padding: 0 5%;
-    margin-top: 1px;
+		text-align: center;
     &:hover, &.active{
         cursor: pointer;
         outl: 2px,solid;
@@ -52,8 +51,6 @@ body{
 		&:focus{
 			outline: 1px solid @PipText;
 		}
-
-
 }
 
 .submenu-option{
@@ -67,8 +64,22 @@ body{
 	}
 }
 
+.menu-option-selected{
+	.menu-option;
+	border: 1px solid @PipText;
+	border-top: none;
+	border-bottom: 2px solid #000;
+}
+
+.submenu-option-selected{
+	.submenu-option;
+	border: 1px solid @PipText;
+	border-bottom: none;
+	border-top: 2px solid #000;
+}
+
 #StatSub, #InvSub, #DataSub{
-	position: absolute;
+	position: absolute;;
 }
 
 .StatBar{
@@ -148,8 +159,18 @@ body{
 		position: absolute;
 		background: @PipText;
 		backface-visibility: 0.5;
-
 	}
+}
+
+.MapZone{
+	.Icon;
+	position: absolute;
+	margin-top: 15px;
+	margin-bottom: 35px;
+	margin-left: 5px;
+	margin-right: 5px;
+	width:99%;
+	height: 85%;
 }
 
 tr{
