@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="TopMenu" class="TopScreen" style="float:top;position:relative;">
+    <div id="TopMenu" class="TopScreen" style="float:top;">
         <span id="StatMenu" class="menu-option">STATS</span>
         <span id="InvMenu" class="menu-option">INV</span>
         <span id="DataMenu" class="menu-option">DATA</span>
@@ -22,19 +22,19 @@
         <!-- SatusScreen -->
         <div id="StatScreen">
             <!--SubMenu-->
-            <div id="StatSub" style="left:15%;">
-                <span id="StatusBtn" class="submenu-option">STATUS</span>
-                <span id="SpecialBtn" class="submenu-option">SPECIAL</span>
-                <span id="PerksBtn" class="submenu-option">PERKS</span>
+            <div id="StatSub">
+                <span id="StatusBtn" class="submenu-option" style="left:95px">STATUS</span>
+                <span id="SpecialBtn" class="submenu-option" style="left:185px">SPECIAL</span>
+                <span id="PerksBtn" class="submenu-option" style="left:280px">PERKS</span>
             </div>
             <!--Status-->
-            <div id="StatusScreen" style="top:25px;width:100%;height:90%">
+            <div id="StatusScreen">
                 <span id="HeadHP" class="bar" style="top:60px;"></span>
-                <span id="LArmHP" class="bar" style="top:125px; margin-left:-170px;"></span>
-                <span id="RArmHP" class="bar" style="top:125px; margin-left: 170px;"></span>
-                <span id="FeetHP" class="bar" style="bottom:50px;"></span>
-                <span id="LLegHP" class="bar" style="bottom:135px; margin-left:-170px;"></span>
-                <span id="RLegHP" class="bar" style="bottom:135px; margin-left: 170px;"></span>
+                <span id="LArmHP" class="bar" style="top:125px; left:250px;"></span>
+                <span id="RArmHP" class="bar" style="top:125px; right:200px;"></span>
+                <span id="FeetHP" class="bar" style="top:380px;"></span>
+                <span id="LLegHP" class="bar" style="bottom:125px; left:250px;"></span>
+                <span id="RLegHP" class="bar" style="bottom:125px; right:200px;"></span>
                 <!--EquipmentIcons-->
                 <div id="EquipIcons">
                     <span class="EquipIcon" style="left:32px;top:200px;">Weapon</span>
@@ -119,12 +119,12 @@
         </div>    <!-- InventoryScreen -->
         <div id="InvScreen" style="top:25px;position:absolute;width:100%;height:90%">
             <div id="InventoryScreen">
-                <div id="InvSub" style="left:1.2%">
-                    <span id="WeaponBtn" class="submenu-option" >WEAPON</span>
-                    <span id="ApparelBtn" class="submenu-option">APPAREL</span>
-                    <span id="AidBtn" class="submenu-option"    >AID</span>
-                    <span id="MiscBtn" class="submenu-option"   >MISC</span>
-                    <span id="JunkBtn" class="submenu-option"   >JUNK</span>
+                <div id="InvSub">
+                    <span id="WeaponBtn" class="submenu-option" style="left:220px">WEAPON</span>
+                    <span id="ApparelBtn" class="submenu-option" style="left:320px">APPAREL</span>
+                    <span id="AidBtn" class="submenu-option" style="left:420px">AID</span>
+                    <span id="MiscBtn" class="submenu-option" style="left:475px">MISC</span>
+                    <span id="JunkBtn" class="submenu-option" style="left:550px">JUNK</span>
                 </div>
                 <br />
                 <br />
@@ -191,17 +191,24 @@
             </div>
             <div id="ItemSpecs" style="position:absolute;bottom:0px;right:120px;">
                 <table id="ItemSpecs" width="310">
-                    <tr><td>Value</td><td id="ItVal">150</td></tr>
-                    <tr><td>Weight</td><td id="ItWg">8</td></tr>
-                    <tr><td>Damage</td><td id="ItEf">50</td></tr>
+                    <tr>
+                        <td>Value</td><td id="ItVal">150</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td><td id="ItWg">8</td>
+                    </tr>
+                    <tr>
+                        <td>Damage</td><td id="ItEf">50</td>
+                    </tr>
+                    <tr></tr>
                 </table>
             </div>
           </div>
-        <div id="DataScreen" style="top:25px;width:100%;height:90%;">
-          <div id="DataSub" style="left:5%;">
-            <span id="CalBtn" class="submenu-option">CALENDAR</span>
-            <span id="ConBtn" class="submenu-option">CONTACTS</span>
-            <span id="AbtBtn" class="submenu-option">ABOUT</span>
+        <div id="DataScreen" style="top:25px;width:100%;height:90%">
+          <div id="DataSub" style="margin-left:20%;">
+            <span id="CalBtn" class="submenu-option" style="margin-left:0%;">CALENDAR</span>
+            <span id="ConBtn" class="submenu-option" stype="margin-left:-55%">CONTACTS</span>
+            <span id="AbtBtn" class="submenu-option" style="margin-left:-90%">ABOUT</span>
           </div>
           <br />
           <div id="CalendarScreen">
@@ -211,22 +218,10 @@
             <iframe src="https://contacts.google.com/u/0/preview/all" style="border-width:3" width="800" height="380" frameborder="0" scrolling="no"></iframe>
           </div>
           <div id="AboutScreen">
-            <table style="position:absolute;left:40px;border-collapse: separate; border-spacing:0 5px" width="525">
-              <tr class="InvetoryItemButton"><td>HTML5 Pip-Boy Version</td><td>.6a</td></tr>
-              <tr class="InvetoryItemButton"><td>Coding Time (Hours)</td><td>24</td></tr>
-              <tr class="InvetoryItemButton"><td>Versions Pushed (GitHub)</td><td>3</td></tr>
-              <tr class="InvetoryItemButton"><td>Developer Max Count</td><td>3</td></tr>
-              <tr class="InvetoryItemButton"><td >SolAZDev - Carlos Orama</td><td>Main Dev</td></tr>
-              <tr class="InvetoryItemButton"><td>SuperXWolf - Christian Encarnacion</td><td>Bugs'n'Sub</td></tr>
-              <tr class="InvetoryItemButton"><td>Mr.Canvas - Bryan Something</td><td>Red Theme</td></tr>
-            </table>
+
           </div>
         </div>
-        <div id="MapScreen" style="top:25px;width:100%,height:90%;">
-        </div>
-        <div id="RadioScreen" style="top:25px;width:100%;height:90%">
 
-        </div>
     </div>
 </body>
 

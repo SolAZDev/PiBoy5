@@ -41,7 +41,7 @@ body{
     transition: all, 0.2s;
 		background: none;
 		border: none;
-    padding: 1px 45px;
+    padding: 0 5%;
     margin-top: 1px;
     &:hover, &.active{
         cursor: pointer;
@@ -51,17 +51,24 @@ body{
     }
 		&:focus{
 			outline: 1px solid @PipText;
+		}
+
 
 }
 
 .submenu-option{
-	position: absolute;
 	.menu-option;
+	position: relative;
+	display: inline-block;;
 	padding: 0 15px;
 	color: fade(@PipText,60%);
 	&:hover, &.active, &:target{
 		color: @PipText;
 	}
+}
+
+#StatSub, #InvSub, #DataSub{
+	position: absolute;
 }
 
 .StatBar{

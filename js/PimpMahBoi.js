@@ -17,27 +17,18 @@ $(document).ready(function(){
     $("#StatusScreen").show();
     $("#SpecialScreen").hide();
     $("#PerkScreen").hide();
-    $("#StatusBtn").css("left",95);
-    $("#SpecialBtn").css("left",185);
-    $("#PerksBtn").css("left",285);
   });
   $("#PerksBtn").click(function(){
     $("#StatusScreen").hide();
     $("#SpecialScreen").hide();
     $("#PerkScreen").show();
     SPECIALS(8);
-    $("#StatusBtn").css("left",-85);
-    $("#SpecialBtn").css("left",5);
-    $("#PerksBtn").css("left",95);
   });
   $("#SpecialBtn").click(function(){
     $("#StatusScreen").hide();
     $("#SpecialScreen").show();
     $("#PerkScreen").hide();
     SPECIALS(1);
-    $("#StatusBtn").css("left",5);
-    $("#SpecialBtn").css("left",95);
-    $("#PerksBtn").css("left",185);
   });
 { //SPECIALS
   $("#STR").click(function(){
@@ -104,6 +95,11 @@ $(document).ready(function(){
     $("#AboutScreen").hide();
     $("#ContactScreen").show();
   });
+  $("#AbtBtn").click(function(){
+    $("#CalendarScreen").hide();
+    $("#ContactScreen").hide();
+    $("#AboutScreen").show();
+  });
 
 });
 
@@ -119,9 +115,6 @@ function StartUp(Screen) {
       BattrryPercent();
       $("#StatScreen").show();
       $("#StatScreen").show();
-      $("#StatusBtn").css("left",95);
-      $("#SpecialBtn").css("left",185);
-      $("#PerksBtn").css("left",285);
       $("#InvScreen").hide();
       $("#DataScreen").hide();
       $("#MapScreen").hide();
