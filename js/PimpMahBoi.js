@@ -82,6 +82,64 @@ $(document).ready(function(){
   $("#JunkBtn").click(function(){
     ItemListing(5);
   });
+  //Items
+  $("#SGItem").click(function(){
+    $("#ItVal").text("250");
+    $("#ItWg").text("10");
+    $("#ItEf").text("75");
+  });
+  $("#RGItem").click(function(){
+    $("#ItVal").text("2000");
+    $("#ItWg").text("5");
+    $("#ItEf").text("120");
+  });
+  $("#AStem").click(function(){
+    $("#ItVal").text("2500");
+    $("#ItWg").text("10");
+    $("#ItEf").text("150");
+  });
+
+  $("#JacketItem").click(function(){
+    $("#ItVal").text("0");
+    $("#ItWg").text("1");
+    $("#ItEf").text("750");
+  });
+
+  $("#CartonExpansions").click(function(){
+    $("#ItVal").text("50");
+    $("#ItWg").text("3");
+    $("#ItEf").text("180");
+  });
+
+  $("#FAidItem").click(function(){
+    $("#ItVal").text("750");
+    $("#ItWg").text("1");
+    $("#ItEf").text("300");
+  });
+
+  $("#RasPiItm").click(function(){
+    $("#ItVal").text("4000");
+    $("#ItWg").text("1");
+    $("#ItEf").text("??");
+  });
+
+  $("#BatItm").click(function(){
+    $("#ItVal").text("900");
+    $("#ItWg").text("5");
+    $("#ItEf").html(BattrryPercent());
+  });
+
+  $("#PBItm").click(function(){
+    $("#ItVal").text("0");
+    $("#ItWg").text("8");
+    $("#ItEf").text("?");
+  });
+
+  $("#BagItm").click(function(){
+    $("#ItVal").text("975");
+    $("#ItWg").text("15");
+    $("#ItEf").text("?");
+  });
 
   //DATA Section
   $("#DataMenu").click(function(){
@@ -152,7 +210,7 @@ function SPECIALS(Screen){
       break;
     case 2:
       $("#SName").html("<b>PERCEPTION</b>");
-      $("#SDescription").html("The ability to tell what's around you, <br />making you more aware of your<br />surroundings.");
+      $("#SDescription").html("Your scouting instincts tells what's<br />around you, making you more aware<br />of your surroundings.");
       break;
     case 3:
       $("#SName").html("<b>ENDURANCE</b>");
@@ -172,7 +230,7 @@ function SPECIALS(Screen){
       break;
     case 7:
       $("#SName").html("<b>LUCK</b>");
-      $("#SDescription").html("How much of a Lucky bastard are you? Asked the Pip-Boy.");
+      $("#SDescription").html("How much of a Lucky bastard are you?<br />Asked the Pip-Boy.");
       break;
     case 8:
       $("#PName").html("<b>PROGRAMMING</b>");
@@ -242,6 +300,7 @@ function BattrryPercent(){
     $("#BatHealth").css('width',(battery.level * 100)+"%");
   }else{
     navigator.getBattery().then(function(batteryL) {
+      return batteryL.level * 100;
       $("#BatHealth").css('width',batteryL.level*100+"%");
     });
   }
