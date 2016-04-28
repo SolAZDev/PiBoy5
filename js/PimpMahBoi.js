@@ -82,65 +82,58 @@ $(document).ready(function(){
   $("#JunkBtn").click(function(){
     ItemListing(5);
   });
-  //Items
-  $("#SGItem").click(function(){
-    $("#ItVal").text("250");
-    $("#ItWg").text("10");
-    $("#ItEf").text("75");
-  });
-  $("#RGItem").click(function(){
-    $("#ItVal").text("2000");
-    $("#ItWg").text("5");
-    $("#ItEf").text("120");
-  });
-  $("#AStem").click(function(){
-    $("#ItVal").text("2500");
-    $("#ItWg").text("10");
-    $("#ItEf").text("150");
-  });
-
-  $("#JacketItem").click(function(){
-    $("#ItVal").text("0");
-    $("#ItWg").text("1");
-    $("#ItEf").text("750");
-  });
-
-  $("#CartonExpansions").click(function(){
-    $("#ItVal").text("50");
-    $("#ItWg").text("3");
-    $("#ItEf").text("180");
-  });
-
-  $("#FAidItem").click(function(){
-    $("#ItVal").text("750");
-    $("#ItWg").text("1");
-    $("#ItEf").text("300");
-  });
-
-  $("#RasPiItm").click(function(){
-    $("#ItVal").text("4000");
-    $("#ItWg").text("1");
-    $("#ItEf").text("??");
-  });
-
-  $("#BatItm").click(function(){
-    $("#ItVal").text("900");
-    $("#ItWg").text("5");
-    $("#ItEf").html(BattrryPercent());
-  });
-
-  $("#PBItm").click(function(){
-    $("#ItVal").text("0");
-    $("#ItWg").text("8");
-    $("#ItEf").text("?");
-  });
-
-  $("#BagItm").click(function(){
-    $("#ItVal").text("975");
-    $("#ItWg").text("15");
-    $("#ItEf").text("?");
-  });
-
+  {  //Items
+    $("#SGItem").click(function(){
+      $("#ItVal").text("250");
+      $("#ItWg").text("10");
+      $("#ItEf").text("75");
+    });
+    $("#RGItem").click(function(){
+      $("#ItVal").text("2000");
+      $("#ItWg").text("5");
+      $("#ItEf").text("120");
+    });
+    $("#AStem").click(function(){
+      $("#ItVal").text("2500");
+      $("#ItWg").text("10");
+      $("#ItEf").text("150");
+    });
+    $("#JacketItem").click(function(){
+      $("#ItVal").text("0");
+      $("#ItWg").text("1");
+      $("#ItEf").text("750");
+    });
+    $("#CartonExpansions").click(function(){
+      $("#ItVal").text("50");
+      $("#ItWg").text("3");
+      $("#ItEf").text("180");
+    });
+    $("#FAidItem").click(function(){
+      $("#ItVal").text("750");
+      $("#ItWg").text("1");
+      $("#ItEf").text("300");
+    });
+    $("#RasPiItm").click(function(){
+      $("#ItVal").text("4000");
+      $("#ItWg").text("1");
+      $("#ItEf").text("??");
+    });
+    $("#BatItm").click(function(){
+      $("#ItVal").text("900");
+      $("#ItWg").text("5");
+      $("#ItEf").html(BattrryPercent());
+    });
+    $("#PBItm").click(function(){
+      $("#ItVal").text("0");
+      $("#ItWg").text("8");
+      $("#ItEf").text("?");
+    });
+    $("#BagItm").click(function(){
+      $("#ItVal").text("975");
+      $("#ItWg").text("15");
+      $("#ItEf").text("?");
+    });
+  }
   //DATA Section
   $("#DataMenu").click(function(){
     StartUp(3);
@@ -163,6 +156,16 @@ $(document).ready(function(){
   $("#MapMenu").click(function(){
     StartUp(4);
   });
+
+  //RADIO Section
+  $("#RadioMenu").click(function(){
+    StartUp(5);
+  });
+  $("#FRM").click(function(){SetStation(1);});
+  $("#FRC").click(function(){SetStation(2);});
+  $("#DCR").click(function(){SetStation(3);});
+  $("#MNR").click(function(){SetStation(4);});
+  $("#MRM").click(function(){SetStation(5);});
 
 });
 
@@ -215,6 +218,9 @@ function StartUp(Screen) {
       $("#ContactScreen").hide();
       $("#AboutScreen").hide();
 
+      $("#Date").html(new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear());
+      $("#Hour").html(new Date().getHours()+":"+new Date().getMinutes());
+
       $("#StatMenu").removeClass("menu-option-selected");
       $("#InvMenu").removeClass("menu-option-selected");
       $("#DataMenu").addClass("menu-option-selected");
@@ -222,18 +228,32 @@ function StartUp(Screen) {
       $("#RadioMenu").removeClass("menu-option-selected");
       break;
     case 4:
+      $("#StatScreen").hide();
+      $("#InvScreen").hide();
+      $("#DataScreen").hide();
+      $("#MapScreen").show();
+      $("#RadioScreen").hide();
+      getLocation();
+
+      $("#StatMenu").removeClass("menu-option-selected");
+      $("#InvMenu").removeClass("menu-option-selected");
+      $("#DataMenu").removeClass("menu-option-selected");
+      $("#MapMenu").addClass("menu-option-selected");
+      $("#RadioMenu").removeClass("menu-option-selected");
+      break;
+    case 5:
     $("#StatScreen").hide();
     $("#InvScreen").hide();
     $("#DataScreen").hide();
-    $("#MapScreen").show();
-    $("#RadioScreen").hide();
-    getLocation();
+    $("#MapScreen").hide();
+    $("#RadioScreen").show();
+    SetStation(1);
 
     $("#StatMenu").removeClass("menu-option-selected");
     $("#InvMenu").removeClass("menu-option-selected");
     $("#DataMenu").removeClass("menu-option-selected");
-    $("#MapMenu").addClass("menu-option-selected");
-    $("#RadioMenu").removeClass("menu-option-selected");
+    $("#MapMenu").removeClass("menu-option-selected");
+    $("#RadioMenu").addClass("menu-option-selected");
       break;
   }
   //StartUpEnd
@@ -347,9 +367,8 @@ function BattrryPercent(){
 function getLocation(){
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(pos){
-      //alert(pos.coords.latitude+":"+pos.coords.longitude);
-      //InitMap(pos);
       showPosition(pos);
+      $("#LocTxt").text("Lat: "+pos.coords.latitude+" - Long: "+pos.coords.longitude);
     });
   }
 }
@@ -386,4 +405,34 @@ function showError(error) {
             x.innerHTML = "An unknown error occurred."
             break;
     }
+}
+
+function GetStation(StationID) {
+  switch (StationID) {
+    default:
+    case 1:
+      return "http://46.101.243.245:8000/falloutfm1.ogg";
+      break;
+    case 2:
+      return "http://46.101.243.245:8000/falloutfm6.ogg";
+      break;
+    case 3:
+      return "http://46.101.243.245:8000/falloutfm7.ogg";
+      break;
+    case 4:
+      return "http://3333.live.streamtheworld.com:80/SAM05AAC285_SC"
+      break;
+    case 5:
+      return "http://8653.live.streamtheworld.com:80/SAM04AAC179_SC"
+      break;
+  }
+}
+
+function SetStation(StationID) {
+  var audio = document.getElementById('RadioMain');
+  audio.innerHTML ="<source src="+GetStation(StationID)+" >";
+  console.log(audio.innerHTML);
+  audio.autoplay = true;
+  audio.load();
+  audio.play();
 }
