@@ -25,7 +25,7 @@
         <!-- SatusScreen -->
         <div id="StatScreen">
             <!--SubMenu-->
-            <div id="StatSub" style="left:12.5%;">
+            <div id="StatSub" style="left:-20%;">
                 <span id="StatusBtn"  class="submenu-option">STATUS</span>
                 <span id="SpecialBtn" class="submenu-option">SPECIAL</span>
                 <span id="PerksBtn"   class="submenu-option">PERKS</span>
@@ -40,12 +40,12 @@
                 <span id="RLegHP" class="bar" style="bottom:135px; margin-left: 170px;"></span>
                 <!--EquipmentIcons-->
                 <div id="EquipIcons">
-                    <span class="EquipIcon" style="left:32px;top:200px;">Weapon</span>
-                    <span class="EquipIcon" style="left:129px;top:200px;width:60">Ammo</span>
-                    <span class="EquipIcon" style="right:48px;top:165px;width:100">Armor</span>
-                    <span class="EquipIcon" style="right:115px;top:265px;height:32px;width:32px">Def</span>
-                    <span class="EquipIcon" style="right:81px;top:265px;height:32px;width:32px">Tec</span>
-                    <span class="EquipIcon" style="right:47px;top:265px;height:32px;width:32px">Rad</span>
+                    <span class="EquipIcon" style="left:32px;top:200px;"><img src="img/ICONS/STATS/STATUS/weapon icon.png" /></span>
+                    <span class="EquipIcon" style="left:129px;top:200px;width:60;padding:20 0px;"><img src="img/ICONS/STATS/STATUS/crosshair icon.png" /><br /><br />180</span>
+                    <span class="EquipIcon" style="right:48px;top:165px;width:100"><img src="img/ICONS/STATS/STATUS/armor icon.png" /></span>
+                    <span class="EquipIcon" style="right:115px;top:265px;padding:10 0px;height:72px;width:32px;"><img src="img/ICONS/STATS/STATUS/dam icon.png" /><br /><br />13</span>
+                    <span class="EquipIcon" style="right:81px;top:265px;padding:10 0px;height:72px;width:32px"><img src="img/ICONS/STATS/STATUS/tec icon.png" /><br /><br / /> </span>
+                    <span class="EquipIcon" style="right:47px;top:265px;padding:10 0px;height:72px;width:32px"><img src="img/ICONS/STATS/STATUS/rad icon.png" /><br /><br />18</span>
                 </div>
                 <!--Items-->
                 <div id="StatItems" style="position:absolute; bottom:35px; left:8px;">
@@ -57,7 +57,7 @@
             <div id="SpecialScreen">
                 <br />
                 <br />
-                <table style="position:absolute;left:55px;top:70px;border-collapse:separate;border-spacing:0 5px" width="355">
+                <table style="position:absolute;left:55px;top:50px;border-collapse:separate;border-spacing:0 5px" width="355">
                   <tr id="STR" class="InvetoryItemButton"><td>Strength</td><td style="text-align:center;">8</td></tr>
                   <tr id="PER" class="InvetoryItemButton"><td>Perception</td><td style="text-align:center;">7</td></tr>
                   <tr id="END" class="InvetoryItemButton"><td>Endurance</td><td style="text-align:center;">10</td></tr>
@@ -66,8 +66,7 @@
                   <tr id="AGI" class="InvetoryItemButton"><td>Agility</td><td style="text-align:center;">5</td></tr>
                   <tr id="LCK" class="InvetoryItemButton"><td>Luck</td><td style="text-align:center;">5</td></tr>
                 </table>
-                <div id="SImage>" class="EquipIcon" style="position:absolute;right:40px;width:300px;height:250px;margin:auto;">
-                    AYLMAO. Image Goes Here.
+                <div id="SImg" class="EquipIcon" style="positon:absolute;top:50px;right:40px;width:300px;height:250px;padding:0px;">
                 </div>
                 <div id="SName" class="TopScreen" style="position:absolute;bottom:155px;text-align:center;right:40px;width:300px"><b>AYY</b></div>
                 <br />
@@ -78,12 +77,14 @@
             <div id="PerkScreen">
                 <br />
                 <br />
-                <table style="position:absolute;left:55px;top:70px;border-collapse:separate;border-spacing:0 5px" width="355">
+                <table style="position:absolute;left:55px;top:50px;border-collapse:separate;border-spacing:0 5px" width="355">
                   <tr id="CODE" class="InvetoryItemButton"><td>Coding and Programming</td><td style="text-align:center;">8</td></tr>
                   <tr id="CRAFT"class="InvetoryItemButton"><td>Crafting and Art</td><td style="text-align:center;">7</td></tr>
                   <tr id="LINUX"class="InvetoryItemButton"><td>Linux Master Race</td><td style="text-align:center;">?</td></tr>
+                  <tr id="PoS"  class="InvetoryItemButton"><td>Peddler of Sins</td><td style="text-align:center;">999</td></tr>
+                  <tr id="GFk"  class="InvetoryItemButton"><td>Ghoul Fucker</td><td style="text-align:center;">998</td></tr>
                 </table>
-                  <div id="PImage>" class="EquipIcon" style="position:absolute;right:40px;top:50px;width:300px;height:250px;">
+                  <div id="PImg" class="EquipIcon" style="positon:absolute;top:50px;right:40px;width:300px;height:250px;padding:0px;">
                     AYLMAO. Image Goes Here.
                   </div>
                   <div id="PName" class="TopScreen" style="position:absolute;bottom:155px;text-align:center;right:40px;width:300px"><b>AYY</b></div>
@@ -102,13 +103,13 @@
         </div>    <!-- InventoryScreen -->
         <div id="InvScreen" style="top:25px;position:absolute;width:100%;height:90%">
             <div id="InventoryScreen">
-                <div id="InvSub" style="left:1.2%">
+                <span id="InvSub" style="left:28.5%">
                     <span id="WeaponBtn" class="submenu-option" >WEAPON</span>
                     <span id="ApparelBtn" class="submenu-option">APPAREL</span>
                     <span id="AidBtn" class="submenu-option"    >AID</span>
                     <span id="MiscBtn" class="submenu-option"   >MISC</span>
                     <span id="JunkBtn" class="submenu-option"   >JUNK</span>
-                </div>
+                </span>
                 <br />
                 <br />
                 <div id="WeaponList" style="position:absolute;left:40px;">
@@ -171,7 +172,7 @@
             <div id="ItImg" class="EquipIcon" style="positon:absolute;top:30px;right:15px;width:300px;height:250px;">
                 AyyLmao~ImgaesGoHere
             </div>
-            <div id="ItemSpecs" style="position:absolute;bottom:0px;right:0px;">
+            <div id="ItemSpecs" style="position:absolute;bottom:25px;right:0px;">
                 <table id="ItemSpecs" width="310">
                     <tr><td>Value</td><td id="ItVal" style="text-align:center;">150</td></tr>
                     <tr><td>Weight</td><td id="ItWg" style="text-align:center;">8</td></tr>
@@ -183,27 +184,27 @@
             </div>
           </div>
         <div id="DataScreen" style="top:25px;width:100%;height:90%;">
-          <div id="DataSub" style="left:5%;">
+          <div id="DataSub" style="left:15%;">
             <span id="CalBtn" class="submenu-option">CALENDAR</span>
             <span id="ConBtn" class="submenu-option">CONTACTS</span>
             <span id="AbtBtn" class="submenu-option">ABOUT</span>
           </div>
           <br />
           <div id="CalendarScreen" style="top:15px;width:100%,height:90%;">
-            <iframe src="https://calendar.google.com/calendar/embed?title=Solrac%27s%20Calendar&amp;showTitle=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;height=450&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=lordsolrac2%40gmail.com&amp;color=%2329527A&amp;src=%23contacts%40group.v.calendar.google.com&amp;color=%2329527A&amp;src=en.pr%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FManaus" style="border-width:0;left:0px;margin-top:5px;" class="MapZone" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?title=Solrac%27s%20Calendar&amp;showTitle=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;height=450&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=lordsolrac2%40gmail.com&amp;color=%2329527A&amp;src=%23contacts%40group.v.calendar.google.com&amp;color=%2329527A&amp;src=en.pr%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FManaus" style="border-width:0;left:0px;margin-top:-25px;" class="MapZone" frameborder="0" scrolling="no"></iframe>
           </div>
           <div id="ContactScreen">
             <iframe src="https://contacts.google.com/u/0/preview/all" style="border-width:3" width="800" height="380" frameborder="0" scrolling="no"></iframe>
           </div>
           <div id="AboutScreen">
-            <table style="position:absolute;left:40px;border-collapse: separate; border-spacing:0 5px" width="525">
-              <tr class="InvetoryItemButton"><td>HTML5 Pip-Boy Version</td><td>.6a</td></tr>
-              <tr class="InvetoryItemButton"><td>Coding Time (Hours)</td><td>24</td></tr>
-              <tr class="InvetoryItemButton"><td>Versions Pushed (GitHub)</td><td>3</td></tr>
-              <tr class="InvetoryItemButton"><td>Developer Max Count</td><td>3</td></tr>
-              <tr class="InvetoryItemButton"><td >SolAZDev - Carlos Orama</td><td>Main Dev</td></tr>
-              <tr class="InvetoryItemButton"><td>SuperXWolf - Christian Encarnacion</td><td>Bugs'n'Sub</td></tr>
-              <tr class="InvetoryItemButton"><td>Mr.Canvas - Bryan Something</td><td>Red Theme</td></tr>
+            <table style="position:absolute;left:40px;border-collapse: separate; border-spacing:0 5px" width="380">
+              <tr id="AbtS" class="InvetoryItemButton"><td>HTML5 Pip-Boy Version</td>             <td style="text-align:center;">.8b</td></tr>
+              <tr id="CTim" class="InvetoryItemButton"><td>Coding Time (Hours)</td>               <td style="text-align:center;">84</td></tr>
+              <tr id="GHst" class="InvetoryItemButton"><td>Versions Pushed (GitHub)</td>          <td style="text-align:center;">7</td></tr>
+              <tr id="GDev" class="InvetoryItemButton"><td>Developer Max Count</td>               <td style="text-align:center;">3</td></tr>
+              <tr id="SAZD" class="InvetoryItemButton"><td >SolAZDev - Carlos Orama</td>          <td style="text-align:center;">Main Dev</td></tr>
+              <tr id="CEnc" class="InvetoryItemButton"><td>SuperXWolf - Christian Encarnacion</td><td style="text-align:center;">Bugs'n'Sub</td></tr>
+              <tr id="MCnv" class="InvetoryItemButton"><td>Mr.Canvas - Bryan Something</td>       <td style="text-align:center;">Art/Icons</td></tr>
             </table>
           </div>
           <div style="position:absolute; bottom:4px;display:block;margin:0px;width:100%">
@@ -225,6 +226,7 @@
             <li id="DCR" class="InvetoryItemButton">Diamond City Radio</li><!-- Link: http://46.101.243.245:8000/falloutfm7.ogg -->
             <li id="MNR" class="InvetoryItemButton">Metal Nation Radio</li><!-- Link:http://3333.live.streamtheworld.com:80/SAM05AAC285_SC -->
             <li id="MRM" class="InvetoryItemButton">Metal Rock Mania</li><!-- Link: http://8653.live.streamtheworld.com:80/SAM04AAC179_SC -->
+            <li id="THR" class="InvetoryItemButton">Gensokyo Radio</li><!-- Link: http://stream.gensokyoradio.net:8000/stream/1/ -->
           </ul>
           <div style="position:absolute;right:25px;top:60%">
             <audio id="RadioMain" controls="controls" style="width:350px;">
