@@ -27,7 +27,7 @@ $(document).ready(function() {
         SPECIALS(8);
     });
     $("#SpecialBtn").click(function() {
-        $("#StatSub").css("left", ".5%");
+        $("#StatSub").css("left", "-32.5%");
         $("#StatusScreen").hide();
         $("#SpecialScreen").show();
         $("#PerkScreen").hide();
@@ -73,27 +73,27 @@ $(document).ready(function() {
 
     //INV Section
     $("#InvMenu").click(function() {
-        $("#InvSub").css("left", "28.5%");
+        $("#InvSub").css("left", "3.5%");
         StartUp(2);
     });
     $("#WeaponBtn").click(function() {
-        $("#InvSub").css("left", "28.5%");
+        $("#InvSub").css("left", "3.5%");
         ItemListing(1);
     });
     $("#ApparelBtn").click(function() {
-        $("#InvSub").css("left", "14.5%");
+        $("#InvSub").css("left", "-9.5%");
         ItemListing(2);
     });
     $("#AidBtn").click(function() {
-        $("#InvSub").css("left", "3.3%");
+        $("#InvSub").css("left", "-20%");
         ItemListing(3);
     });
     $("#MiscBtn").click(function() {
-        $("#InvSub").css("left", "-5%");
+        $("#InvSub").css("left", "-28.5%");
         ItemListing(4);
     });
     $("#JunkBtn").click(function() {
-        $("#InvSub").css("left", "-14.5%");
+        $("#InvSub").css("left", "-38.5%");
         ItemListing(5);
     }); { //Items
         $("#SGItem").click(function() {
@@ -152,21 +152,21 @@ $(document).ready(function() {
     }
     //DATA Section
     $("#DataMenu").click(function() {
-        $("#DataSub").css("left", "45%");
+        $("#DataSub").css("left", "15.5%");
         StartUp(3);
     });
     $("#CalBtn").click(function() {
-        $("#DataSub").css("left", "15%");
+        $("#DataSub").css("left", "15.5%");
         StartUp(3);
     });
     $("#ConBtn").click(function() {
-        $("#DataSub").css("left", "15%");
+        $("#DataSub").css("left", "-.5%");
         $("#CalendarScreen").hide();
         $("#AboutScreen").hide();
         $("#ContactScreen").show();
     });
     $("#AbtBtn").click(function() {
-        $("#DataSub").css("left", "16%");
+        $("#DataSub").css("left", "-13.5%");
         $("#CalendarScreen").hide();
         $("#ContactScreen").hide();
         $("#AboutScreen").show();
