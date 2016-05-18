@@ -12,21 +12,21 @@ Pip-Boy 3000 Mk.IV from FO4, made to be customizable for each user. This is in n
 - 5 Radio stations
 
 #Work in Progress
-* STATS [90%]
-  * STATUS 90% - Missing Pipboy image, EXP bar is a battery meter
+* STATS [10%]
+  * STATUS 100% - EXP bar is a battery meter-
   * SPECIAL 100% - Custom Description
   * PERKS 100% - Custom Perks
-* INV [90%] - Missing Artwork
-* DATA [45%] - Functionality Missing
+* INV [100%] - Custom Items
+* DATA [90%] - Functionality Missing
   * CALENDAR - General Calendar, could improve
-  * CONTACTS - Missing, Google Accounts or Offline File?
+  * CONTACTS - ~~Missing, Google Accounts or Offline File?~~ Ultimately Removed for v1.0, might be added later
   * ABOUT - Similar thing as the readme but with few more details
-* MAP [99%] - Missing Tint, could improve if it's the user's Google Accounts
+* MAP [100%] - ~~Missing Tint, could improve if it's the user's Google Accounts~~ Didn't get the tint to work but it's functional, so 100%
 * RADIO [90%] - 5 Radio Stations, No Wavelength effect yet.
 
 
 #TODO
-- Fix Submenu Positions to fit any screen.
+- ~~Fix Submenu Positions to fit any screen.~~ DONE!! 
 - Optimize image size for efficiency
 - Optimize script and improve features to realtime (intead of manually updating)
 - Add Radio Wavelength

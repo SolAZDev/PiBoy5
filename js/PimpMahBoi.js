@@ -11,23 +11,26 @@ $(document).ready(function() {
     //STATS Section
     $("#StatMenu").click(function() {
         StartUp(1);
+        UpdateSub(1);
         $("#StatusScreen").show();
     });
     $("#StatusBtn").click(function() {
-        $("#StatSub").css("left", "-20%");
+        UpdateSub(1);
         $("#StatusScreen").show();
         $("#SpecialScreen").hide();
         $("#PerkScreen").hide();
     });
     $("#PerksBtn").click(function() {
-        $("#StatSub").css("left", "-44.5%");
+        //$("#StatSub").css("left", "-44.5%");
+        UpdateSub(3);
         $("#StatusScreen").hide();
         $("#SpecialScreen").hide();
         $("#PerkScreen").show();
         SPECIALS(8);
     });
     $("#SpecialBtn").click(function() {
-        $("#StatSub").css("left", "-32.5%");
+        //$("#StatSub").css("left", "-32.5%");
+        UpdateSub(2);
         $("#StatusScreen").hide();
         $("#SpecialScreen").show();
         $("#PerkScreen").hide();
@@ -73,33 +76,40 @@ $(document).ready(function() {
 
     //INV Section
     $("#InvMenu").click(function() {
-        $("#InvSub").css("left", "3.5%");
+        //$("#InvSub").css("left", "3.5%");
         StartUp(2);
+        UpdateSub(4);
     });
     $("#WeaponBtn").click(function() {
-        $("#InvSub").css("left", "3.5%");
+        //$("#InvSub").css("left", "3.5%");
+        UpdateSub(4);
         ItemListing(1);
     });
     $("#ApparelBtn").click(function() {
-        $("#InvSub").css("left", "-9.5%");
+        //$("#InvSub").css("left", "-9.5%");
+        UpdateSub(5);
         ItemListing(2);
     });
     $("#AidBtn").click(function() {
-        $("#InvSub").css("left", "-20%");
+        //$("#InvSub").css("left", "-20%");
+        UpdateSub(6);
         ItemListing(3);
     });
     $("#MiscBtn").click(function() {
-        $("#InvSub").css("left", "-28.5%");
+        //$("#InvSub").css("left", "-28.5%");
+        UpdateSub(7);
         ItemListing(4);
     });
     $("#JunkBtn").click(function() {
-        $("#InvSub").css("left", "-38.5%");
+//        $("#InvSub").css("left", "-38.5%");
+        UpdateSub(8);
         ItemListing(5);
     }); { //Items
         $("#SGItem").click(function() {
             $("#ItVal").text("250");
             $("#ItWg").text("10");
             $("#ItEf").text("75");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/WEAPONS/Sol\'s Shotty.png\">");
         });
         $("#RGItem").click(function() {
             $("#ItVal").text("2000");
@@ -111,7 +121,15 @@ $(document).ready(function() {
             $("#ItVal").text("2500");
             $("#ItWg").text("10");
             $("#ItEf").text("150");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/WEAPONS/Aegis Sword.png\">");
         });
+        $("#LGItem").click(function(){
+            $("#ItVal").text("0");
+            $("#ItWg").text("10");
+            $("#ItEf").text("200");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/WEAPONS/love glove.png\">");
+        });
+
         $("#JacketItem").click(function() {
             $("#ItVal").text("0");
             $("#ItWg").text("1");
@@ -124,49 +142,104 @@ $(document).ready(function() {
             $("#ItEf").text("180");
             $("#ItImg").html("<img src=\"img/ICONS/INV/APPAREL/metal chest piece.png\">");
         });
+        $("#CAItem").click(function() {
+            $("#ItVal").text("50");
+            $("#ItWg").text("30");
+            $("#ItEf").text("180");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/APPAREL/cage armor.png\">");
+        });
+        $("#RMItem").click(function() {
+            $("#ItVal").text("50");
+            $("#ItWg").text("30");
+            $("#ItEf").text("180");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/APPAREL/red man\'s mask.png\">");
+        });
+
         $("#FAidItem").click(function() {
             $("#ItVal").text("750");
             $("#ItWg").text("1");
             $("#ItEf").text("300");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/AID/first aid.png\">");
         });
+        $("#CigItem").click(function() {
+            $("#ItVal").text("750");
+            $("#ItWg").text("1");
+            $("#ItEf").text("300");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/AID/cigar.png\">");
+        });
+        $("#JetItem").click(function() {
+            $("#ItVal").text("750");
+            $("#ItWg").text("1");
+            $("#ItEf").text("300");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/AID/jet.png\">");
+        });
+        $("#PsItem").click(function() {
+            $("#ItVal").text("750");
+            $("#ItWg").text("1");
+            $("#ItEf").text("300");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/AID/psycho.png\">");
+        });
+
         $("#RasPiItm").click(function() {
             $("#ItVal").text("4000");
             $("#ItWg").text("1");
             $("#ItEf").text("??");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/MISC/pie.png\">");
         });
         $("#BatItm").click(function() {
             $("#ItVal").text("900");
             $("#ItWg").text("5");
             $("#ItEf").html(BattrryPercent());
+            $("#ItImg").html("<img src=\"img/ICONS/INV/MISC/10k mAH battery.png\">");
         });
         $("#PBItm").click(function() {
             $("#ItVal").text("0");
             $("#ItWg").text("8");
             $("#ItEf").text("?");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/MISC/pi boi.png\">");
         });
+        $("#STItem").click(function() {
+            $("#ItVal").text("0");
+            $("#ItWg").text("8");
+            $("#ItEf").text("?");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/MISC/skull torch lighter.png\">");
+        });
+
         $("#BagItm").click(function() {
             $("#ItVal").text("975");
             $("#ItWg").text("15");
             $("#ItEf").text("?");
+            $("#ItImg").html("<img src=\"img/ICONS/INV/JUNK/odds and ends.png\">");
         });
+      $("#RPItem").click(function() {
+          $("#ItVal").text("975");
+          $("#ItWg").text("15");
+          $("#ItEf").text("?");
+          $("#ItImg").html("<img src=\"img/ICONS/INV/JUNK/shit fone.png\">");
+      });
+
     }
     //DATA Section
     $("#DataMenu").click(function() {
-        $("#DataSub").css("left", "15.5%");
+        //$("#DataSub").css("left", "15.5%");
         StartUp(3);
+        UpdateSub(9);
     });
     $("#CalBtn").click(function() {
-        $("#DataSub").css("left", "15.5%");
+//        $("#DataSub").css("left", "15.5%");
+        UpdateSub(9);
         StartUp(3);
     });
     $("#ConBtn").click(function() {
-        $("#DataSub").css("left", "-.5%");
+        //$("#DataSub").css("left", "-.5%");
+        UpdateSub(10);
         $("#CalendarScreen").hide();
         $("#AboutScreen").hide();
         $("#ContactScreen").show();
     });
     $("#AbtBtn").click(function() {
-        $("#DataSub").css("left", "-13.5%");
+        //$("#DataSub").css("left", "-13.5%");
+        UpdateSub(11);
         $("#CalendarScreen").hide();
         $("#ContactScreen").hide();
         $("#AboutScreen").show();
@@ -196,7 +269,7 @@ $(document).ready(function() {
         SetStation(4);
     });
     $("#MRM").click(function() {
-        SetStation(5);
+        SetStation( 5);
     });
     $("#THR").click(function(){
       SetStation(6);
@@ -214,9 +287,9 @@ function ScreenTransition(Page) {
 
 function StartUp(Screen) {
     switch (Screen) {
-        default:
-            case 1:
-            BattrryPercent();
+      default:
+      case 1:
+        BattrryPercent();
         $("#StatScreen").show();
         $("#StatScreen").show();
         $("#InvScreen").hide();
@@ -231,9 +304,10 @@ function StartUp(Screen) {
         $("#DataMenu").removeClass("menu-option-selected");
         $("#MapMenu").removeClass("menu-option-selected");
         $("#RadioMenu").removeClass("menu-option-selected");
+        UpdateSub(1);
         break;
         case 2:
-                $("#StatScreen").hide();
+            $("#StatScreen").hide();
             $("#InvScreen").show();
             $("#DataScreen").hide();
             $("#MapScreen").hide();
@@ -346,18 +420,18 @@ function SPECIALS(Screen) {
             break;
         case 10:
             $("#PName").html("<b>LINUX</b>");
-            $("#PDescription").html("For better, or worse. This user knows their<br />way inside Linux. <b>Beware, you have been warned.</br>");
+            $("#PDescription").html("For better, or worse. This user knows <br />their way inside Linux. <b>Beware, you<br />have been warned.</br>");
             $("#PImg").html("<img src=\"img/ICONS/STATS/PERKS/linux master race perk.png\">");
             //$("#PImg").html("<img src=\"img/ICONS/STATS/PERKS/linux master race perk2.png\">");
             break;
         case 11:
             $("#PName").html("<b>GHOUL FUCKER</b>");
-            $("#PDescription").html("Beyond the worse of fetishes, the half dead<br />will never be bored<br />with you around!");
+            $("#PDescription").html("Beyond the worse of fetishes, the half<br />dead  will never be bored with you<br />around!");
             $("#PImg").html("<img src=\"img/ICONS/STATS/PERKS/ghoul fucker perk.png\">");
           break;
         case 12:
             $("#PName").html("<b>PEDDLER OF SINS</b>");
-            $("#PDescription").html("The outstanding will to toss everything for<br />some cash, even if it's partially<br />your dignity.");
+            $("#PDescription").html("The outstanding will to toss everything<br />for some cash, even if it's partially your<br />dignity.");
             $("#PImg").html("<img src=\"img/ICONS/STATS/PERKS/peddler of sins perk.png\">");
             break;
     }
@@ -412,12 +486,15 @@ function BattrryPercent() {
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
     var battery = navigator.battery || navigator.mozBattery;
     if (!isChrome) {
-        return battery.level * 100;
+	console.log("Batter at "+battery.level*100);
         $("#BatHealth").css('width', (battery.level * 100) + "%");
+        $("#BatAP").text(""+battery.level*100+"/100");
+        return battery.level * 100;
     } else {
         navigator.getBattery().then(function(batteryL) {
-            return batteryL.level * 100;
             $("#BatHealth").css('width', batteryL.level * 100 + "%");
+            $("#BatAP").text(""+batteryL.level*100+"/100");
+            return batteryL.level * 100;
         });
     }
 }
@@ -476,8 +553,9 @@ function GetStation(StationID) {
     switch (StationID) {
         default:
             case 1:
-            return "http://46.101.243.245:8000/falloutfm1.ogg";
-        break;
+              return "http://46.101.243.245:8000/falloutfm1.ogg";
+              $("#RStationL").html("Streaming Fallout Main Station.... &#160;"); //Didi't work for some reason
+            break;
         case 2:
                 return "http://46.101.243.245:8000/falloutfm6.ogg";
             break;
@@ -503,4 +581,55 @@ function SetStation(StationID) {
     audio.autoplay = true;
     audio.load();
     audio.play();
+}
+
+function sleep(msec) {
+  var start = new Date().getTime();
+  for(var i=0; i<1e7; i++){
+    if((new Date().getTime() - start)>msec){
+      break;
+    }
+  }
+}
+
+function UpdateSub(SubMenu){
+  var p1,p2,p3,p4,p5 = 0;
+  switch (SubMenu) {
+    default:
+    case 1: //STATUS
+      $("#StatSub").css("left",String(parseFloat($("#StatMenu").css("left"))+$("#StatMenu").width()/2-$("#StatusBtn").width()/2)+"px");
+    break;
+    case 2: //SPECIAL
+      $("#StatSub").css("left",String(parseFloat($("#StatMenu").css("left"))+$("#StatMenu").width()/2-$("#StatSub").width()/2+10)+"px");
+    break;
+    case 3:
+      $("#StatSub").css("left",String(parseFloat($("#StatMenu").css("left"))+$("#StatMenu").width()/2-$("#StatSub").width()/2-$("#SpecialBtn").width()-25-$("PerksBtn").width()/2+6)+"px");
+    break;
+///////////INV
+    case 4: //Weapons
+      $("#InvSub").css("left",String(parseFloat($("#InvMenu").css("left"))+$("#InvMenu").width()/2-$("#WeaponBtn").width()/2)+"px");
+      break;
+    case 5: //Apparel
+      $("#InvSub").css("left",String(parseFloat($("#InvMenu").css("left"))+$("#InvMenu").width()/2-$("#WeaponBtn").width()-70-$("ApparelBtn").width()/2)+"px");
+      break;
+    case 6://Aid
+      $("#InvSub").css("left",String(parseFloat($("#InvMenu").css("left"))+$("#InvMenu").width()/2-$("#WeaponBtn").width()-70-$("#ApparelBtn").width()-$("#AidBtn").width()/2)+"px");
+      break;
+    case 7://Misc
+      $("#InvSub").css("left",String(parseFloat($("#InvMenu").css("left"))+$("#InvMenu").width()/2-$("#WeaponBtn").width()-70-$("#ApparelBtn").width()-$("#AidBtn").width()-32-$("#MiscBtn").width()/2)+"px");
+      break;
+    case 8://Junk
+      $("#InvSub").css("left",String(parseFloat($("#InvMenu").css("left"))+$("#InvMenu").width()/2-$("#WeaponBtn").width()-70-$("#ApparelBtn").width()-$("#AidBtn").width()-32-$("#MiscBtn").width()-35-$("#JunkBtn").width()/2)+"px");
+      break;
+    ///////DATA
+    case 9://Calendar
+      $("#DataSub").css("left",String(parseFloat($("#DataMenu").css("left"))+$("#DataMenu").width()/2-$("#CalBtn").width()/2)+"px");
+      break;
+    case 10://Contacts
+      $("#DataSub").css("left",String(parseFloat($("#DataMenu").css("left"))+$("#DataMenu").width()/2-$("#CalBtn").width()-30-$("#ConBtn").width()/2)+"px");
+      break;
+    case 11:
+      $("#DataSub").css("left",String(parseFloat($("#DataMenu").css("left"))+$("#DataMenu").width()/2-$("#CalBtn").width()-30-$("#ConBtn").width()-40-$("#AbtBtn").width()/2)+"px");
+      break;
+  }
 }

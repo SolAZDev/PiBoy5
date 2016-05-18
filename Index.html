@@ -11,10 +11,9 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/PimpMahBoi.js"></script>
 </head>
-
 <body>
     <div id="TopMenu" class="TopScreen">
-        <span id="StatMenu" class="menu-option" style=";position:absolute;left:13%;">STATS</span>
+        <span id="StatMenu" class="menu-option" style="position:absolute;left:13%;">STATS</span>
         <span id="InvMenu" class="menu-option"  style="position:absolute;left:30%;">INV</span>
         <span id="DataMenu" class="menu-option" style="position:absolute;left:47%;">DATA</span>
         <span id="MapMenu" class="menu-option"  style="position:absolute;right:30%;">MAP</span>
@@ -26,11 +25,11 @@
         <!-- SatusScreen -->
         <div id="StatScreen">
             <!--SubMenu-->
-            <div id="StatSub" style="left:-20%;">
+            <span id="StatSub" style="position:absolute;">
                 <span id="StatusBtn"  class="submenu-option">STATUS</span>
                 <span id="SpecialBtn" class="submenu-option">SPECIAL</span>
                 <span id="PerksBtn"   class="submenu-option">PERKS</span>
-            </div>
+            </span>
             <!--Status-->
             <div id="StatusScreen" style="top:25px;width:100%;height:90%">
                 <span id="HeadHP" class="bar" style="top:60px;"></span>
@@ -41,15 +40,19 @@
                 <span id="RLegHP" class="bar" style="bottom:135px; margin-left: 170px;"></span>
                 <!--EquipmentIcons-->
                 <div id="EquipIcons">
-                    <span class="EquipIcon" style="left:32px;top:200px;"><img src="img/ICONS/STATS/STATUS/weapon icon.png" /></span>
-                    <span class="EquipIcon" style="left:129px;top:200px;width:60;padding:20 0px;"><img src="img/ICONS/STATS/STATUS/crosshair icon.png" /><br /><br />180</span>
-                    <span class="EquipIcon" style="right:48px;top:165px;width:100"><img src="img/ICONS/STATS/STATUS/armor icon.png" /></span>
-                    <span class="EquipIcon" style="right:115px;top:265px;padding:10 0px;height:72px;width:32px;"><img src="img/ICONS/STATS/STATUS/dam icon.png" /><br /><br />13</span>
-                    <span class="EquipIcon" style="right:81px;top:265px;padding:10 0px;height:72px;width:32px"><img src="img/ICONS/STATS/STATUS/tec icon.png" /><br /><br / /> </span>
-                    <span class="EquipIcon" style="right:47px;top:265px;padding:10 0px;height:72px;width:32px"><img src="img/ICONS/STATS/STATUS/rad icon.png" /><br /><br />18</span>
+                    <span class="EquipIcon" style="left:32px;top:200px;"><br /><img src="img/ICONS/STATS/STATUS/weapon icon.png" /></span>
+                    <span class="EquipIcon" style="left:129px;top:200px;width:60;padding:20 0px;"><br /><img src="img/ICONS/STATS/STATUS/crosshair icon.png" /><br /><br />180</span>
+                    <span class="EquipIcon" style="right:48px;top:165px;width:100"><br /><img src="img/ICONS/STATS/STATUS/armor icon.png" /></span>
+                    <span class="EquipIcon" style="right:115px;top:265px;padding:10 0px;height:72px;width:32px;"><br /><img src="img/ICONS/STATS/STATUS/dam icon.png"/><br />13</span>
+                    <span class="EquipIcon" style="right:81px;top:265px;padding:10 0px;height:72px;width:32px"><br /><img src="img/ICONS/STATS/STATUS/tec icon.png" /> <br />10</span>
+                    <span class="EquipIcon" style="right:47px;top:265px;padding:10 0px;height:72px;width:32px"><br /><img src="img/ICONS/STATS/STATUS/rad icon.png" /> <br />18</span>
                 </div>
+                <!-- The Pip-Boy-->
+                <span id="PipBoyImg" class="DefaultObject" style="margin: 60px -100px;">
+                  <img src="img/ICONS/STATS/STATUS/vaultboy.png" />
+                </span>
                 <!--Items-->
-                <div id="StatItems" style="position:absolute; bottom:35px; left:8px;">
+                <div id="StatItems" style="position:absolute; bottom:35px;">
                     <span id="StatStim" class="StatItemButton">Stimpak (1)</span>
                     <span id="StatRad" class="StatItemButton">RadAway (0)</span>
                 </div>
@@ -67,7 +70,7 @@
                   <tr id="AGI" class="InvetoryItemButton"><td>Agility</td><td style="text-align:center;">5</td></tr>
                   <tr id="LCK" class="InvetoryItemButton"><td>Luck</td><td style="text-align:center;">5</td></tr>
                 </table>
-                <div id="SImg" class="EquipIcon" style="positon:absolute;top:50px;right:40px;width:300px;height:250px;padding:0px;">
+                <div id="SImg" class="EquipIcon TintImg" style="positon:absolute;top:50px;right:40px;width:300px;height:250px;padding:0px;">
                 </div>
                 <div id="SName" class="TopScreen" style="position:absolute;bottom:155px;text-align:center;right:40px;width:300px"><b>AYY</b></div>
                 <br />
@@ -81,11 +84,11 @@
                 <table style="position:absolute;left:55px;top:50px;border-collapse:separate;border-spacing:0 5px" width="355">
                   <tr id="CODE" class="InvetoryItemButton"><td>Coding and Programming</td><td style="text-align:center;">8</td></tr>
                   <tr id="CRAFT"class="InvetoryItemButton"><td>Crafting and Art</td><td style="text-align:center;">7</td></tr>
-                  <tr id="LINUX"class="InvetoryItemButton"><td>Linux Master Race</td><td style="text-align:center;">?</td></tr>
-                  <tr id="PoS"  class="InvetoryItemButton"><td>Peddler of Sins</td><td style="text-align:center;">999</td></tr>
-                  <tr id="GFk"  class="InvetoryItemButton"><td>Ghoul Fucker</td><td style="text-align:center;">998</td></tr>
+                  <tr id="LINUX"class="InvetoryItemButton"><td>Linux Master Race</td><td style="text-align:center;">?</td></tr><!-- LINUX USERS ONLY! -->
+                  <tr id="PoS"  class="InvetoryItemButton"><td>Peddler of Sins</td><td style="text-align:center;">999</td></tr><!-- Redman Perk-->
+                  <tr id="GFk"  class="InvetoryItemButton"><td>Ghoul Fucker</td><td style="text-align:center;">998</td></tr><!-- Redman Perk-->
                 </table>
-                  <div id="PImg" class="EquipIcon" style="positon:absolute;top:50px;right:40px;width:300px;height:250px;padding:0px;">
+                  <div id="PImg" class="EquipIcon TintImg" style="positon:absolute;top:50px;right:40px;width:300px;height:250px;padding:0px;">
                     AYLMAO. Image Goes Here.
                   </div>
                   <div id="PName" class="TopScreen" style="position:absolute;bottom:155px;text-align:center;right:40px;width:300px"><b>AYY</b></div>
@@ -95,16 +98,16 @@
                   </div>
             </div>
             <div id="StatusBar" style="position:absolute; bottom:0px;display:block;margin:0px;width:100%;">
-                <span id="HPButton" class="StatBar">HP &#160;&#160;&#160; 510/510 &#160;&#160;&#160;&#160;</span>
+                <button id="HPButton" class="StatBar">HP &#160;&#160;&#160; 510/510 &#160;&#160;&#160;&#160;</button>
                 <span class="StatBar" style="width:480px">LEVEL 20 &#160;
                   <div class="progress" style="position:absolute; bottom:0px; width:365px; height:8px; margin-bottom:13px"><div id="BatHealth" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div></div>
                 </span>
-                <span class="StatBar">AP &#160;&#160;&#160;&#160; <span style="text-align: right">120/120</span></span>
+                <span class="StatBar">AP &#160;&#160;&#160;&#160; <span id="BatAP" style="text-align: right">100/100</span></span>
             </div>
         </div>    <!-- InventoryScreen -->
         <div id="InvScreen" style="top:25px;position:absolute;width:100%;height:90%">
             <div id="InventoryScreen">
-                <span id="InvSub" style="left:28.5%">
+                <span id="InvSub" style="position:absolute;">
                     <span id="WeaponBtn" class="submenu-option" >WEAPON</span>
                     <span id="ApparelBtn" class="submenu-option">APPAREL</span>
                     <span id="AidBtn" class="submenu-option"    >AID</span>
@@ -128,6 +131,10 @@
                             <td>Aegis Sword</td>
                             <td>1</td>
                         </tr>
+                        <tr id="LGItem" class="InvetoryItemButton">
+                          <td>Red's Love Glove</td>
+                          <td>1</td>
+                        </tr>
                     </table>
                 </div>
                 <div id="DefList" style="position:absolute;left:40px;">
@@ -140,12 +147,29 @@
                             <td>CartonSteel ChestPiece</td>
                             <td>1</td>
                         </tr>
+                        <tr id="CAItem" class="InvetoryItemButton">
+                            <td>Red's Cage Armor</td>
+                            <td>1</td>
+                        </tr>
+                        <tr id="RMItem" class="InvetoryItemButton">
+                          <td>Red's Hollentour Mask</td>
+                          <td>1</td>
+                        </tr>
                     </table>
                 </div>
                 <div id="AidList" style="position:absolute;left:40px;">
                     <table style="border-collapse:separate;border-spacing:0 5px;" width="325">
                         <tr id="FAidItem" class="InvetoryItemButton">
                             <td>First Aid Kit</td><td>10</td>
+                        </tr>
+                        <tr id="CigItem" class="InvetoryItemButton">
+                          <td>Red's Black Bullet Ciggars</td><td>10</td>
+                        </tr>
+                        <tr id="JetItem" class="InvetoryItemButton">
+                          <td>Jet</td><td>5</td>
+                        </tr>
+                        <tr id="PsItem" class="InvetoryItemButton">
+                          <td>Psycho</td><td>19</td>
                         </tr>
                     </table>
                 </div>
@@ -157,8 +181,11 @@
                     <tr id="BatItm" class="InvetoryItemButton">
                       <td>10k mAh Batter</td><td>1</td>
                     </tr>
-                    <tr id="PBItm`" class="InvetoryItemButton">
+                    <tr id="PBItm" class="InvetoryItemButton">
                       <td>[E] Pip-Boy Solrac Edition</td><td>1</td>
+                    </tr>
+                    <tr id="STItem" class="InvetoryItemButton">
+                      <td>Red's Skull Torch Lighter</td><td>1</td>
                     </tr>
                   </table>
                 </div>
@@ -167,10 +194,13 @@
                     <tr id="BagItm" class="InvetoryItemButton">
                       <td>Bag of Random Odds</td><td>100</td>
                     </tr>
+                    <tr id="RPItem" class="InvetoryItemButton">
+                      <td>Red's "Phone"</td><td>1</td>
+                    </tr>
                   </table>
                 </div>
             </div>
-            <div id="ItImg" class="EquipIcon" style="positon:absolute;top:30px;right:15px;width:300px;height:250px;padding:0px;">
+            <div id="ItImg" class="EquipIcon TintImg" style="positon:absolute;top:30px;right:15px;width:300px;height:250px;padding:0px;">
                 AyyLmao~ImgaesGoHere
             </div>
             <div id="ItemSpecs" style="position:absolute;bottom:25px;right:0px;">
@@ -185,16 +215,18 @@
             </div>
           </div>
         <div id="DataScreen" style="top:25px;width:100%;height:90%;">
-          <div id="DataSub" style="left:15%;">
+          <div id="DataSub" style="left:15%;position:absolute;">
             <span id="CalBtn" class="submenu-option">CALENDAR</span>
             <span id="ConBtn" class="submenu-option">CONTACTS</span>
             <span id="AbtBtn" class="submenu-option">ABOUT</span>
           </div>
-          <br />
+          <br /><br />
+
           <div id="CalendarScreen" style="top:15px;width:100%,height:90%;">
             <iframe src="https://calendar.google.com/calendar/embed?title=Solrac%27s%20Calendar&amp;showTitle=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;height=450&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=lordsolrac2%40gmail.com&amp;color=%2329527A&amp;src=%23contacts%40group.v.calendar.google.com&amp;color=%2329527A&amp;src=en.pr%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FManaus" style="border-width:0;left:0px;margin-top:-25px;" class="MapZone" frameborder="0" scrolling="no"></iframe>
           </div>
           <div id="ContactScreen">
+            <span style="margin:auto">SORRY!! PiBoy5 Doesn't have Advanced Stuff Implemented Yet ;-;</span>
             <iframe src="https://contacts.google.com/u/0/preview/all" style="border-width:3" width="800" height="380" frameborder="0" scrolling="no"></iframe>
           </div>
           <div id="AboutScreen">
@@ -234,7 +266,7 @@
             </audio>
           </div>
           <div style="position:absolute; bottom:0px;display:block;margin:0px;width:100%">
-            <span class="StatBar" style="width:780px">&#160;</span>
+            <span id="RStationL" class="StatBar" style="width:780px">Select a Radio Station to Play!! &#160;</span>
           </div>
         </div>
     </div>

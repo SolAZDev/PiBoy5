@@ -17,6 +17,12 @@ body{
 	text-align: center;
 }
 
+.DefaultObject{
+	position: absolute;
+	-ms-transform-origin:50% 50%;
+	-webkit-transform-origin:50% 50%;
+	transform-origin:50%50%;
+}
 
 .TopScreen{
 	background-color: #000;
@@ -37,6 +43,7 @@ body{
 }
 
 .menu-option{
+	//.DefaultObject;
     transition: all, 0.2s;
 		background: none;
 		padding: 0 15px;
@@ -55,8 +62,8 @@ body{
 
 .submenu-option{
 	.menu-option;
-	position: relative;
-	display: inline-block;;
+//	position: absolute;
+	display: inline-block;
 	padding: 0 15px;
 	color: fade(@PipText,60%);
 	&:hover, &.active, &:target{
@@ -79,10 +86,6 @@ body{
 	border: 1px solid @PipText;
 	border-bottom: none;
 	border-top: 2px solid #000;
-}
-
-#StatSub, #InvSub, #DataSub{
-	position: relative;
 }
 
 .StatBar{
@@ -122,7 +125,10 @@ body{
 	text-align: center;
 	display: inline-block;
 	background: fade(@PipText, 25%);
-
+}
+.SPIcon{
+	.EquipIcon;
+	background: none;
 }
 
 .InvetoryItemButton{
@@ -187,4 +193,24 @@ tr{
 
 td{
 	padding: 10 10px;
+}
+
+.TintImg{
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+	&::before{
+		content: "";
+		display: block;
+		position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  background: fade(@PipText,25%);
+		-webkit-mask-image: inherit;
+	  transition: all .3s linear;
+	}
 }
