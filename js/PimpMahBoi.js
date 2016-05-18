@@ -488,12 +488,12 @@ function BattrryPercent() {
     if (!isChrome) {
 	console.log("Batter at "+battery.level*100);
         $("#BatHealth").css('width', (battery.level * 100) + "%");
-        $("#BatAP").text(""+battery.level*100+"/100");
+        $("#BatAP").text(""+parseInt(battery.level*100)+"/100");
         return battery.level * 100;
     } else {
         navigator.getBattery().then(function(batteryL) {
             $("#BatHealth").css('width', batteryL.level * 100 + "%");
-            $("#BatAP").text(""+batteryL.level*100+"/100");
+            $("#BatAP").text(""+parseInt(batteryL.level*100)+"/100");
             return batteryL.level * 100;
         });
     }
