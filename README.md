@@ -26,8 +26,6 @@ Pip-Boy 3000 Mk.IV from FO4, made to be customizable for each user. This is in n
 
 
 #TODO
-- ~~Fix Submenu Positions to fit any screen.~~ DONE!! 
-- Optimize image size for efficiency
 - Optimize script and improve features to realtime (intead of manually updating)
 - Add Radio Wavelength
 
